@@ -1,4 +1,4 @@
-export const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+export const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://gatherly-backend-oey6.onrender.com/api';
 
 export async function fetchEvents() {
   const res = await fetch(`${API_BASE}/events`, { cache: 'no-store' });

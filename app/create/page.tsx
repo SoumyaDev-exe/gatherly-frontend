@@ -50,7 +50,7 @@ export default function CreateEventPage() {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/events', {
+      const res = await fetch('https://gatherly-backend-oey6.onrender.com/api/events', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -29,7 +29,7 @@ export function AntigravityChat({ eventId, eventTitle }: { eventId: string; even
     setLoading(true)
 
     try {
-      const res = await fetch(`http://localhost:5000/api/events/${eventId}/ask`, {
+      const res = await fetch(`https://gatherly-backend-oey6.onrender.com/api/events/${eventId}/ask`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: query })

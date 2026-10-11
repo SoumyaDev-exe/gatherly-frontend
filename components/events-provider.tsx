@@ -27,7 +27,7 @@ export function EventsProvider({ children }: { children: React.ReactNode }) {
 
   const refreshEvents = useCallback(async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/events')
+      const res = await fetch('https://gatherly-backend-oey6.onrender.com/api/events')
       if (!res.ok) throw new Error('Failed to load events')
       const data = await res.json()
 
@@ -88,7 +88,7 @@ export function EventsProvider({ children }: { children: React.ReactNode }) {
 
       if (token) {
         try {
-          const res = await fetch(`http://localhost:5000/api/events/${id}/register`, {
+          const res = await fetch(`https://gatherly-backend-oey6.onrender.com/api/events/${id}/register`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
